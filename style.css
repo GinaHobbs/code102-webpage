@@ -19,14 +19,23 @@ nav {
 
 nav li {
   display: inline;
+  padding: 25px;
 }
 
 #nav_header {
   font-size: larger;
+  margin-bottom: 20px;
 }
 
 #nav_footer {
   font-size: small;
+}
+
+#FF4_logo {
+  text-align: center;
+  background-color: blue;
+  border: cornsilk 5px solid;
+  border-radius: 5px;
 }
 
 section p {
