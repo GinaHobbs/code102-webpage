@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  color: white;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1 {
+  text-align: center;
+  background-color: blue;
+  border: cornsilk 5px solid;
+  border-radius: 5px;
+}
+
+nav {
+  text-align: center;
+  background-color: blue;
+  border: cornsilk 5px solid;
+  border-radius: 5px;
+}
+
+nav li {
+  display: inline;
+}
+
+#nav_header {
+  font-size: larger;
+}
+
+#nav_footer {
+  font-size: small;
+}
+
+section p {
+  text-align: center;
+  background-color: blue;
+  border: cornsilk 5px solid;
+  border-radius: 5px;
+  font-size: larger;
+}
+
+footer li {
+  text-align: center;
+  display: inline;
+}
