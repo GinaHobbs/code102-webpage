@@ -19,10 +19,25 @@
         }
       }
 
-      // colorChoice = 0;
+      systemColorFirstRun = 0;
+      oldColorChoice = 0;
       function changeSystemColor() {
-        // document.getElementById("system_h1").style.backgroundColor = "black";
-        var colorChoice = randomNumber(5);
+        var colorChoice = randomNumber(4);
+        console.log(colorChoice)
+        console.log(oldColorChoice)
+        if ((oldColorChoice == colorChoice) && (systemColorFirstRun == 1)) {
+          colorChoice = 0;
+          oldColorChoice = 0;
+        }
+        if ((oldColorChoice != colorChoice) && (systemColorFirstRun == 1)) {
+          oldColorChoice = colorChoice
+        }
+        if (systemColorFirstRun == 0) {
+          console.log('here')
+          oldColorChoice = colorChoice;
+          systemColorFirstRun = 1;
+        }
+
         if (colorChoice == 1) {
           color = "purple";
         } else if (colorChoice == 2) {
