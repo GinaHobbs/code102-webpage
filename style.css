@@ -35,6 +35,10 @@ nav li {
   text-align: center;
 }
 
+#rating {
+  max-width: 10%;
+}
+
 section p {
   text-align: center;
   font-size: larger;

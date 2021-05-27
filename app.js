@@ -4,6 +4,7 @@
         return random;
       }
 
+      // Variables for the randomFF4Image function
       let oldImageChoice = 0;
       let imageFirstRun = 0;
       function randomFF4Image() {
@@ -37,6 +38,7 @@
         }
       }
 
+      // Variables for the changeSystemColor function
       systemColorFirstRun = 0;
       oldColorChoice = 0;
       function changeSystemColor() {
@@ -92,3 +94,20 @@
         event.preventDefault()
       });
 
+      function rate() {
+        //let rating = -1;
+        let rating = prompt('How many stars would you give this page?')
+        while ((rating < 0) || (rating > 5)) {
+          rating = prompt('Please enter a rating between 0 and 5.')
+        }
+
+        if (rating != 1) {
+        document.write('You rate us ' + rating + ' Cecil\'s! <br>')}
+        else {
+          document.write('You rate us ' + rating + ' Cecil! <br>')}
+        
+        let url = 'ff4_cecil_sprite.png'
+        for (i=0; i < rating; i++) {
+          document.write('<img id="rating" src="' + url + '">')
+        }
+      }
