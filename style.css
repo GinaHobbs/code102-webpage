@@ -1,3 +1,7 @@
+.system {
+  background-color:blue;
+}
+
 body {
   background-color: black;
   color: white;
@@ -5,14 +9,12 @@ body {
 }
 h1 {
   text-align: center;
-  background-color: blue;
   border: cornsilk 5px solid;
   border-radius: 5px;
 }
 
 nav {
   text-align: center;
-  background-color: blue;
   border: cornsilk 5px solid;
   border-radius: 5px;
 }
@@ -33,14 +35,12 @@ nav li {
 
 #FF4_logo {
   text-align: center;
-  background-color: blue;
   border: cornsilk 5px solid;
   border-radius: 5px;
 }
 
 section p {
   text-align: center;
-  background-color: blue;
   border: cornsilk 5px solid;
   border-radius: 5px;
   font-size: larger;

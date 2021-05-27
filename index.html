@@ -10,8 +10,9 @@
   </head>
   <body>
     <header>
-      <h1>Final Fantasy 4</h1>
-      <nav id="nav_header">
+      <h1 class="system" id="system_h1">Final Fantasy 4</h1>
+      <button type="button" onclick="changeSystemColor()">Change System Color</button>
+      <nav class="system" id="nav_header">
         <ul>
           <li><a>Home</a></li>
           <li><a>World Map</a></li>
@@ -21,19 +22,19 @@
       </nav>
     </header>
     <main>
-      <section id="FF4_logo">
+      <section class="system" id="FF4_logo">
         <img src="FF4_logo.png" alt="Final Fantasy 4 logo">
         <br>
         <button type="button" onclick="randomFF4Image()">Random Image!</button>
       </section>
       <section>
-        <p>
+        <p class="system">
           The most enduring Final Fantasy game.
         </p>
       </section>
     </main>
     <footer>
-      <nav id="nav_footer">
+      <nav class="system" id="nav_footer">
         <ul>
           <li><a>About</a></li>
           <li><a>Yoshitaka Amano</a></li>
