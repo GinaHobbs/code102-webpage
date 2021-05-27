@@ -4,9 +4,27 @@
         return random;
       }
 
+      let oldImageChoice = 0;
+      let imageFirstRun = 0;
       function randomFF4Image() {
-        imageChoice = randomNumber(3);
-        console.log(imageChoice);
+        let imageChoice = randomNumber(3);
+
+        console.log(imageChoice)
+        console.log(oldImageChoice)
+
+        if ((oldImageChoice == imageChoice) && (imageFirstRun == 1)) {
+          imageChoice = 0;
+          oldImageChoice = 0;
+        }
+        if ((oldImageChoice != imageChoice) && (imageFirstRun == 1)) {
+          oldImageChoice = imageChoice
+        }
+        if (imageFirstRun == 0) {
+          console.log('here')
+          oldImageChoice = imageChoice;
+          imageFirstRun = 1;
+        }
+
         button = '<button type="button" onclick="randomFF4Image()">Random Image!</button>'
         if (imageChoice == 1){
           document.getElementById("FF4_logo").innerHTML = '<img src="FF4_red_wings.jpeg"> <br>' + button ;
@@ -23,8 +41,6 @@
       oldColorChoice = 0;
       function changeSystemColor() {
         var colorChoice = randomNumber(4);
-        console.log(colorChoice)
-        console.log(oldColorChoice)
         if ((oldColorChoice == colorChoice) && (systemColorFirstRun == 1)) {
           colorChoice = 0;
           oldColorChoice = 0;
@@ -33,7 +49,6 @@
           oldColorChoice = colorChoice
         }
         if (systemColorFirstRun == 0) {
-          console.log('here')
           oldColorChoice = colorChoice;
           systemColorFirstRun = 1;
         }
