@@ -1,5 +1,7 @@
 .system {
-  background-color:blue;
+  background-color: blue;
+  border: cornsilk 5px solid;
+  border-radius: 5px;
 }
 
 body {
@@ -9,14 +11,10 @@ body {
 }
 h1 {
   text-align: center;
-  border: cornsilk 5px solid;
-  border-radius: 5px;
 }
 
 nav {
   text-align: center;
-  border: cornsilk 5px solid;
-  border-radius: 5px;
 }
 
 nav li {
@@ -35,14 +33,10 @@ nav li {
 
 #FF4_logo {
   text-align: center;
-  border: cornsilk 5px solid;
-  border-radius: 5px;
 }
 
 section p {
   text-align: center;
-  border: cornsilk 5px solid;
-  border-radius: 5px;
   font-size: larger;
 }
 

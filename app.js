@@ -1,11 +1,11 @@
-      function randomNumber() {
+      function randomNumber(max) {
         var random = 0;
-        random = Math.floor(Math.random() * (3) + 1);
+        random = Math.floor(Math.random() * (max) + 1);
         return random;
       }
 
       function randomFF4Image() {
-        imageChoice = randomNumber();
+        imageChoice = randomNumber(3);
         console.log(imageChoice);
         button = '<button type="button" onclick="randomFF4Image()">Random Image!</button>'
         if (imageChoice == 1){
@@ -20,17 +20,19 @@
       }
 
       // colorChoice = 0;
-      function changeSystemColor(colorChoice) {
+      function changeSystemColor() {
         // document.getElementById("system_h1").style.backgroundColor = "black";
-        var colorChoice = randomNumber();
+        var colorChoice = randomNumber(5);
         if (colorChoice == 1) {
           color = "purple";
         } else if (colorChoice == 2) {
           color = "darkgreen";
         } else if (colorChoice == 3) {
           color = "darkred";
+        } else if (colorChoice == 4){
+          color = "slategray";
         } else {
-          color = "black";
+          color = "blue";
         }
         var elements = document.getElementsByClassName("system");
         for (var i in elements) {
@@ -55,3 +57,8 @@
           document.write('<br>You are incorrect!');
         }
       }
+
+      document.getElementById("quizButton").addEventListener("click", function(event){
+        event.preventDefault()
+      });
+
