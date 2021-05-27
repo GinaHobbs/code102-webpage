@@ -11,13 +11,13 @@
   <body>
     <header>
       <h1 class="system" id="system_h1">Final Fantasy 4</h1>
-      <button type="button" onclick="changeSystemColor()">Change System Color</button>
+
       <nav class="system" id="nav_header">
         <ul>
           <li><a>Home</a></li>
           <li><a>World Map</a></li>
           <li><a>Versions</a></li>
-          <li><a>System</a></li>
+          <li><button type="button" onclick="changeSystemColor()">Change System Color</button></li>
         </ul>
       </nav>
     </header>
@@ -29,7 +29,10 @@
       </section>
       <section>
         <p class="system">
-          The most enduring Final Fantasy game.
+          Test your knowledge with the quiz! 
+          <br>
+          <button type="button" onclick="quiz()">Take Quiz!</button>
+          <p class="system">Here is some text<script>quiz()</script></p>
         </p>
       </section>
     </main>
