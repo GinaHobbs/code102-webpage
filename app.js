@@ -74,25 +74,23 @@
 
       function quiz() {
         let bossAnswer = prompt('Who is the final boss of FF4?')
-        document.write('1) Who is the final boss of FF4?<br>Answer: Zeromus <br> You said: ' + bossAnswer)
+        document.getElementById('quiz').innerHTML = '1) Who is the final boss of FF4?<br>Answer: Zeromus <br> You said: '+ bossAnswer
         if (bossAnswer.toLowerCase() == 'zeromus') {
-          document.write('<br>You are correct!');
+          //document.write('<br>You are correct!');
+          document.getElementById('quiz').innerHTML += '<br> You are correct!'
         } else {
-          document.write('<br>You are incorrect!');
+          //document.write('<br>You are incorrect!');
+          document.getElementById('quiz').innerHTML += '<br> You are incorrect!'
         }
 
         let captainAnswer = prompt('What is Cecil the Captain of?')
-        document.write('<br><br>2) What is Cecil the Captain of?<br>Answer: The Red Wings <br> You said: ' + captainAnswer)
+        document.getElementById('quiz').innerHTML += '<br><br>2) What is Cecil the Captain of?<br>Answer: The Red Wings <br> You said: ' + captainAnswer
         if (captainAnswer.toLowerCase() == 'the red wings') {
-          document.write('<br>You are correct!');
+          document.getElementById('quiz').innerHTML += '<br>You are correct!';
         } else {
-          document.write('<br>You are incorrect!');
+          document.getElementById('quiz').innerHTML +='<br>You are incorrect!';
         }
       }
-
-      document.getElementById("quizButton").addEventListener("click", function(event){
-        event.preventDefault()
-      });
 
       function rate() {
         //let rating = -1;
@@ -102,12 +100,12 @@
         }
 
         if (rating != 1) {
-        document.write('You rate us ' + rating + ' Cecil\'s! <br>')}
+        document.getElementById('stars').innerHTML = 'You rate us ' + rating + ' Cecil\'s! <br>'}
         else {
-          document.write('You rate us ' + rating + ' Cecil! <br>')}
+          document.getElementById('stars').innerHTML ='You rate us ' + rating + ' Cecil! <br>'}
         
         let url = 'ff4_cecil_sprite.png'
         for (i=0; i < rating; i++) {
-          document.write('<img id="rating" src="' + url + '">')
+          document.getElementById('stars').innerHTML += '<img id="rating" src="' + url + '">'
         }
       }

@@ -29,11 +29,16 @@
       </section>
       <section>
         <p class="system">
-          How did you do on the quiz! 
+          Test your knowledge with the quiz! 
           <br>
-          <!-- <button id="quizButton" type="button" onclick="quiz();return false;">Take Quiz!</button> -->
-          <p class="system"><script>quiz()</script></p>
-          <p class = "system"><script>rate()</script></p>
+          <button id="quizButton" type="button" onclick="quiz()">Take Quiz!</button>
+          <p class="system" id="quiz">Quiz Results:
+            <!-- <script>quiz()</script> -->
+          </p>
+          <p class = "system" id="stars">
+            <button id="quizButton" type="button" onclick="rate()">Rate us!</button>
+            <!-- <script>rate()</script> -->
+          </p>
         </p>
       </section>
     </main>
