@@ -10,9 +10,6 @@
       function randomFF4Image() {
         let imageChoice = randomNumber(3);
 
-        console.log(imageChoice)
-        console.log(oldImageChoice)
-
         if ((oldImageChoice == imageChoice) && (imageFirstRun == 1)) {
           imageChoice = 0;
           oldImageChoice = 0;
@@ -21,7 +18,6 @@
           oldImageChoice = imageChoice
         }
         if (imageFirstRun == 0) {
-          console.log('here')
           oldImageChoice = imageChoice;
           imageFirstRun = 1;
         }
@@ -73,22 +69,32 @@
       }
 
       function quiz() {
+        document.getElementById('quiz').innerHTML = 'Quiz Results:<br>';
+
         let bossAnswer = prompt('Who is the final boss of FF4?')
-        document.getElementById('quiz').innerHTML = '1) Who is the final boss of FF4?<br>Answer: Zeromus <br> You said: '+ bossAnswer
-        if (bossAnswer.toLowerCase() == 'zeromus') {
-          //document.write('<br>You are correct!');
-          document.getElementById('quiz').innerHTML += '<br> You are correct!'
+        console.log(bossAnswer)
+
+        if (bossAnswer == null){
         } else {
-          //document.write('<br>You are incorrect!');
-          document.getElementById('quiz').innerHTML += '<br> You are incorrect!'
-        }
+          document.getElementById('quiz').innerHTML = '1) Who is the final boss of FF4?<br>Answer: Zeromus <br> You said: '+ bossAnswer
+          if (bossAnswer.toLowerCase() == 'zeromus') {
+            //document.write('<br>You are correct!');
+            document.getElementById('quiz').innerHTML += '<br> You are correct!'
+          } else {
+            //document.write('<br>You are incorrect!');
+            document.getElementById('quiz').innerHTML += '<br> You are incorrect!'
+          }
+      }
 
         let captainAnswer = prompt('What is Cecil the Captain of?')
-        document.getElementById('quiz').innerHTML += '<br><br>2) What is Cecil the Captain of?<br>Answer: The Red Wings <br> You said: ' + captainAnswer
-        if (captainAnswer.toLowerCase() == 'the red wings') {
-          document.getElementById('quiz').innerHTML += '<br>You are correct!';
+        if (captainAnswer == null) {
         } else {
-          document.getElementById('quiz').innerHTML +='<br>You are incorrect!';
+          document.getElementById('quiz').innerHTML += '<br><br>2) What is Cecil the Captain of?<br>Answer: The Red Wings <br> You said: ' + captainAnswer
+          if (captainAnswer.toLowerCase() == 'the red wings') {
+            document.getElementById('quiz').innerHTML += '<br>You are correct!';
+          } else {
+            document.getElementById('quiz').innerHTML +='<br>You are incorrect!';
+          }
         }
       }
 
