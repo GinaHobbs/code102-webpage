@@ -34,22 +34,43 @@
         }
       }
 
+      function storeOldVariable(oldVar, newVar, firstRun) {
+        if ((oldVar == newVar) && (firstRun == 1)) {
+          newVar = 0;
+          oldVar = 0;
+        }
+        if ((oldVar != newVar) && (firstRun == 1)) {
+          oldVar = newVar
+        }
+        if (firstRun == 0) {
+          oldVar = newVar;
+          firstRun = 1;
+        }
+        settings = [oldVar, newVar, firstRun];
+        return settings;
+      }
+
       // Variables for the changeSystemColor function
       systemColorFirstRun = 0;
       oldColorChoice = 0;
       function changeSystemColor() {
         var colorChoice = randomNumber(4);
+        // if old color is equal to the new color then set the new color to 0 so a non duplicate image is shown
         if ((oldColorChoice == colorChoice) && (systemColorFirstRun == 1)) {
           colorChoice = 0;
           oldColorChoice = 0;
         }
+        // stores the current color choice so it is remembered at next run as the old choice
         if ((oldColorChoice != colorChoice) && (systemColorFirstRun == 1)) {
           oldColorChoice = colorChoice
         }
+        // if this is the program first run then store the current color as the old color choice
         if (systemColorFirstRun == 0) {
           oldColorChoice = colorChoice;
           systemColorFirstRun = 1;
         }
+
+        // let settings = storeOldVariable(oldColorChoice, colorChoice, systemColorFirstRun);
 
         if (colorChoice == 1) {
           color = "purple";
